@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 export default class Navbar extends Component {
   render() {
+  let {val}=this.props;
     return (
       <div>
         <nav className="navbar navbar-expand-lg bg-light">
@@ -30,9 +31,13 @@ export default class Navbar extends Component {
         <li className="nav-item">
           <Link className="nav-link" to="/Business">Business</Link>
         </li>       
-        
       </ul>
+      <div className="d-flex" role="search">
+        <input id='searching' className="form-control me-2" type="search" placeholder="Search News" aria-label="Search"/>
+         <Link className="btn btnSearch btn-outline-success"  type="submit" to={`/${val}`}>Search</Link>
+      </div>
     </div>
+
   </div>
 </nav>
       </div>
