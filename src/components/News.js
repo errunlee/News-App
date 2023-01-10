@@ -32,12 +32,16 @@ export default class News extends Component {
   handlePrevious = async () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
     this.setState({ page: this.state.page - 1 })
-    this.update();
+    setTimeout(()=>{      
+      this.update()
+      },10)
   }
   handleNext = async () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
     this.setState({ page: this.state.page + 1 })
+    setTimeout(()=>{      
     this.update()
+    },10)
   }
   render() {
     return (
