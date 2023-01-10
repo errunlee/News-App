@@ -40,12 +40,12 @@ export default class App extends Component {
           </div>
 
           <Routes>
-            <Route exact path='/' element={<News setProgress={this.setProgress} key='1' query="Nepali" />} />
+            <Route exact path='/' element={<News setProgress={this.setProgress} key='1' query="General" />} />
             <Route exact path='/international' element={<News setProgress={this.setProgress}  key='2' query="International" />} />
             <Route exact path='/sports' element={<News setProgress={this.setProgress}  key='3' query="Sports" />} />
             <Route exact path='/election' element={<News setProgress={this.setProgress}  key='4' query="Election" />} />
-            <Route exact path='/health' element={<News setProgress={this.setProgress}  key='4' query="Health" />} />
-            <Route exact path='/business' element={<News setProgress={this.setProgress}  key='5' query="Business" />} />
+            <Route exact path='/health' element={<News setProgress={this.setProgress}  key='5' query="Health" />} />
+            <Route exact path='/business' element={<News setProgress={this.setProgress}  key='6' query="Business" />} />
             {this.state.search} && <Route exact path={`/${this.state.search}`} element={<News setProgress={this.setProgress}  key={this.state.search} query={this.state.search} />} />
           </Routes>
         </div>
