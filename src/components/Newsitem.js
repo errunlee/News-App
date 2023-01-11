@@ -1,9 +1,6 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-export default class Newscomponent extends Component {
-  
-  render() {
-    let {imageUrl,title,description,newsUrl,date,author,source}=this.props
+export default function Newsitem({imageUrl,title,description,newsUrl,date,author,source}) {
     return (
       <>
       <div className='d-flex justify-content-center'>
@@ -24,5 +21,4 @@ export default class Newscomponent extends Component {
       </div>
       </>
     )
-  }
 }
